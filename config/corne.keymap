@@ -9,7 +9,7 @@
 #include <dt-bindings/zmk/bt.h>
 
 &mt {
-    tapping-term-ms = <500>; // This is the value already set by default
+    tapping-term-ms = <400>; // This is the value already set by default
 };
 
 / {
@@ -20,7 +20,7 @@
                       bindings = <
         &kp TAB   &kp Q &kp W &kp E &kp R &kp T      &kp Y &kp U &kp I &kp O &kp P    &kp BSPC
         &kp LCTRL &kp A &kp S &kp D &kp F &kp G      &kp H &kp J &kp K &kp L &kp SEMI &kp SQT
-        &kp LSHFT &kp Z &kp X &kp C &kp V &kp B      &kp N &kp M &kp COMMA &kp DOT &kp FSLH &kp ESC
+        &kp ESC &kp Z &kp X &kp C &kp V &kp B      &kp N &kp M &kp COMMA &kp DOT &kp FSLH &kp RSHFT
                     &kp LGUI &mo 1 &kp RET            &kp SPACE &mo 2 &mt RALT LALT  // Hold = RALT, Tap = LALT
                       >;
                 };
@@ -33,7 +33,7 @@
 //                    | MAC |     | CTRL |   | CTRL | LY3 | ALT |
                         bindings = <
    &kp TAB    &kp N1   &kp N2  &kp N3   &kp N4   &kp N5      &kp N6     &kp N7     &kp N8    &kp N9   &kp N0  &kp DEL
-   &kp F1     &kp F2   &kp F3  &kp F4   &kp F5   &kp F6      &kp LBKT   &kp RBKT   &kp BSLH  &kp SQT  &trans  &kp RET
+   &kp F1     &kp F2   &kp F3  &kp F4   &kp F5   &kp F6      &kp LBKT   &kp RBKT   &kp BSLH  &kp CAPS  &trans  &kp RET
    &kp LSHFT  &trans   &trans  &trans   &trans   &trans      &kp MINUS  &kp EQUAL  &trans    &trans   &trans  &kp GRAVE
                          &kp LGUI    &trans   &kp LCTRL    &kp LCTRL  &mo 3   &kp LALT
                         >;
@@ -48,7 +48,7 @@
                         bindings = <
    &kp  TAB  &kp EXCL &kp AT  &kp HASH   &kp DLLR  &kp PRCNT     &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &kp BSPC
    &kp  F7   &kp F8   &kp F9  &kp F10    &kp F11   &kp F12       &kp LBRC  &kp RBRC  &kp PIPE        &kp DQT  &trans   &trans
-   &kp LSHFT &trans   &trans  &trans     &trans    &trans       &kp UNDER &kp PLUS  &trans          &trans   &trans   &kp TILDE
+   &kp TILDE &trans   &trans  &trans     &trans    &trans       &kp UNDER &kp PLUS  &trans          &trans   &trans   &kp LSHFT
                              &kp LGUI &mo 3   &kp LCTRL   &kp LCTRL    &trans    &kp LALT
                         >;
                 };
@@ -60,8 +60,8 @@
 // | SHFT |     |     |     |     |     |   |     |     |     |     |      |      |
 //                    | MAC |     | SPC |   | ENT |     | ALT |
                         bindings = <
-   &bt BT_CLR  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4      &trans    &trans    &kp UP    &trans     &kp HOME  &kp END
-   &kp LCTRL   &kp LALT     &trans       &trans       &trans       &trans            &trans    &kp LEFT  &kp DOWN  &kp RIGHT  &trans    &kp RET
+   &bt BT_CLR  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4      &trans    &trans    &trans    &trans     &kp HOME  &kp END
+   &kp LCTRL   &kp LALT     &trans       &trans       &trans       &trans            &kp LEFT    &kp DOWN  &kp UP  &kp RIGHT  &trans    &kp RET
    &kp LSHFT   &trans       &trans       &trans       &trans       &trans            &trans    &trans    &trans    &trans     &trans    &trans
                              &kp LGUI &trans   &kp SPACE   &kp RET   &trans    &kp RALT
                         >;
